@@ -3,13 +3,15 @@ package com.anekra.aerport
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
+import com.anekra.aerport.ui.navigations.routes.Routes
+import com.anekra.aerport.ui.screens.MainScreen
 import com.anekra.aerport.ui.theme.AerportTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,30 +19,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AerportTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
+                var route by remember { mutableStateOf(Routes.Home.route) }
+                LaunchedEffect(key1 = intent) {
+                    route = intent.getStringExtra("route") ?: Routes.Home.route
                 }
+                MainScreen(startDestination = route)
             }
         }
     }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     AerportTheme {
-        Greeting("Android")
+        MainScreen(Routes.Home.route)
     }
 }
