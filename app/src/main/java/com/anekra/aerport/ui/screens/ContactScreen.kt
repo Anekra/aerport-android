@@ -6,11 +6,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.anekra.aerport.utils.LocalValues
+import com.anekra.aerport.utils.LocalValues.LocalPadding
 
 @Composable
 fun ContactScreen() {
-    Column(modifier = Modifier.padding(top = LocalValues.padding.calculateTopPadding())) {
+    Column(modifier = Modifier.padding(top = LocalPadding.current.calculateTopPadding())) {
         Text(text = "Contact Screen", color = MaterialTheme.colorScheme.onPrimary)
     }
 }
