@@ -3,12 +3,12 @@ package com.anekra.aerport.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val LightBlue = Color(0xFFC1E8FF)
-val LightBlueGrey = Color(0xFF8EA3AF)
-val LightGreen = Color(0xFF00ccaa)
+val LightRed = Color(0xFFC22A26)
+val LightGreen = Color(0xFF00CAA2)
 
-val DarkBlue = Color(0xFF052E63)
-val DarkBlueGrey = Color(0xFF2D464E)
-val DarkGreen = Color(0xFF1A2E25)
+val DarkBlue = Color(0xFF003981)
+val DarkGreen = Color(0xFF1D553C)
+val DarkRed = Color(0xFF8F0300)
 
 val GhostWhite = Color(0xFFF8F8FF)
 val WhiteSmoke = Color(0xFFF5F5F5)
