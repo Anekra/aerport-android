@@ -40,7 +40,8 @@ fun BotNavBar(navHostController: NavHostController, currentDestination: NavDesti
                     indicatorColor = MaterialTheme.colorScheme.primary,
                     selectedIconColor = MaterialTheme.colorScheme.onPrimary,
                     selectedTextColor = MaterialTheme.colorScheme.onPrimary,
-                    unselectedIconColor = Color.Gray.copy(0.5f)
+                    unselectedIconColor = Color.Gray.copy(0.6f),
+                    unselectedTextColor = Color.Gray.copy(0.6f)
                 )
             )
         }
