@@ -5,4 +5,5 @@ object Constants {
     const val PROJECT_ROUTE = "projectRoute"
     const val BLOG_ROUTE = "blogRoute"
     const val CONTACT_ROUTE = "contactRoute"
+    const val TOP_BAR_HEIGHT = 56
 }
